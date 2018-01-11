@@ -1,0 +1,44 @@
+<html>
+<head>
+	<% include ../viewAll/head %>
+</head>
+  <body onload="ShowTime()">
+
+    <header>
+      <% include ../viewAll/header %>
+    </header>
+<center>
+		<form method='post' name='form1'  action="/chatroom" onsubmit="return chk();">
+		  <h2>Input Name:
+		  <input type="text" name="item">
+			</h2>
+		  <h2>Input Message:
+		  <input type="text" name="item2">
+			</h2>
+		  <br>
+		  <input type="submit" value="Submit">
+		</form>
+</center>
+
+    <footer>
+      <% include ../viewAll/footer %>
+    </footer>
+
+		<script type="text/javascript">
+	  function chk(){
+	    if(document.form1.item.value==''){
+	      alert('Name未填');
+	      document.form1.item.focus();
+	      return false;
+	    }
+	    if(document.form1.item2.value==''){
+	      alert('Message未填');
+	      document.form1.item2.focus();
+	      return false;
+	    }
+	    return true;
+	  }
+	  </script>
+
+  </body>
+</html>

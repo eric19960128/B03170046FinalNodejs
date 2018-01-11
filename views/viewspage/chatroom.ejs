@@ -1,0 +1,42 @@
+<html>
+<head>
+	<% include ../viewAll/head %>
+</head>
+  <body onload="ShowTime()">
+
+    <header>
+      <% include ../viewAll/header %>
+    </header>
+
+<center>
+	<h1>Chatroom</h1>
+</center>
+
+		  <div class="row">
+		  	<div class="col-sm-5">
+		  	</div>
+		    <div class="col-sm-1">
+		    	<ul>
+		    		<% for(var i=0; i < data.length ; i++ ){ %>
+	   			 	  <h3><%= data[i].item %> :</h3>
+	  		 		 <%  } %>
+		    	</ul>
+		    </div>
+		    <div class="col-sm-1">
+		    	<ul>
+		    		<% for(var i=0; i < data.length ; i++ ){ %>
+	   			 	  <h3><%= data[i].item2 %></h3>
+	  		 		 <%  } %>
+		    	</ul>
+		    </div>
+		    <div class="col-sm-5">
+		  	</div>
+		  </div>
+
+
+    <footer>
+      <% include ../viewAll/footer %>
+    </footer>
+
+  </body>
+</html>
